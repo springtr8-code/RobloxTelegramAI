@@ -15,9 +15,11 @@ from google import genai
 # CONFIGURACIÓN
 #==================================
 
-TOKEN = "8884093302:AAElljc_78tuB44lOcjXnGw7S6-F6Q_fHTc"
+import os
 
-API_KEY = "AQ.Ab8RN6IaqUYerSRvwAwdAmBQkmU9hizzN4-Rh-L3CNc1QzHklQ"
+TOKEN = os.getenv("TOKEN")
+
+API_KEY = os.getenv("API_KEY")
 
 
 #==================================
