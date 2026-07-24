@@ -34,7 +34,7 @@ client = genai.Client(
 def preguntar_a_gemini(texto):
 
     respuesta = client.models.generate_content(
-        model="gemini-3.6-flash",
+        model="gemini-2.5-flash",
         contents=f"""
 Eres una IA experta en:
 
