@@ -37,6 +37,9 @@ def preguntar_a_gemini(texto):
 
     try:
 
+        print("API KEY =", API_KEY)
+        print("SYSTEM PROMPT =", SYSTEM_PROMPT)
+
         prompt = f"""
 {SYSTEM_PROMPT}
 
@@ -44,10 +47,14 @@ Usuario:
 {texto}
 """
 
+        print("ENVIANDO A GEMINI")
+
         respuesta = client.models.generate_content(
             model="gemini-2.5-flash",
             contents=prompt
         )
+
+        print("GEMINI HA RESPONDIDO")
 
         return respuesta.text
 
@@ -59,10 +66,7 @@ Usuario:
         print(e)
         print("====================\n")
 
-        return (
-            "Jarvis ha encontrado un error al comunicarse "
-            "con Gemini."
-        )
+        return f"ERROR DE GEMINI:\n\n{e}"
 #==================================
 # ROBLOX STUDIO
 #==================================
