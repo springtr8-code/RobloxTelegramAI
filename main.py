@@ -33,9 +33,13 @@ client = genai.Client(
 
 def preguntar_a_gemini(texto):
 
-    respuesta = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=f"""
+    try:
+
+        respuesta = client.models.generate_content(
+
+            model="gemini-2.5-flash",
+
+            contents=f"""
 Eres una IA llamada Jarvis.
 
 Eres el asistente personal de desarrollo del usuario. Tu trabajo principal es ayudarle a crear proyectos completos, escalables y profesionales.
@@ -381,7 +385,17 @@ async def mensaje(
     # GEMINI
     #----------------------------------
 
-    respuesta = preguntar_a_gemini(texto)
+   print("LLAMANDO A GEMINI")
+
+respuesta = preguntar_a_gemini(texto)
+
+print("GEMINI HA RESPONDIDO")
+
+print(respuesta)
+
+await update.message.reply_text(
+    respuesta
+)
 
 
     #----------------------------------
