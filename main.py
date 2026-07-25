@@ -347,17 +347,20 @@ async def mensaje(
     if update.message.text is None:
         return
 
-
     texto = update.message.text
-
 
     print("\n=========================")
     print("MENSAJE RECIBIDO:")
     print(texto)
     print("=========================\n")
 
+    # PRUEBA
 
-    #----------------------------------
+    await update.message.reply_text(
+
+        "HE RECIBIDO TU MENSAJE"
+
+    )    #----------------------------------
     # ABRIR ROBLOX
     #----------------------------------
 
