@@ -257,7 +257,23 @@ Usuario:
 """
     )
 
-    return respuesta.text
+    print("RESPUESTA DE GEMINI:")
+        print(respuesta.text)
+
+        return respuesta.text
+
+
+    except Exception as e:
+
+        print("\n====================")
+        print("ERROR DE GEMINI")
+        print(e)
+        print("====================\n")
+
+        return (
+            "Jarvis ha encontrado un error al comunicarse "
+            "con Gemini."
+        )
 #==================================
 # ROBLOX STUDIO
 #==================================
@@ -351,20 +367,17 @@ async def mensaje(
     if update.message.text is None:
         return
 
+
     texto = update.message.text
+
 
     print("\n=========================")
     print("MENSAJE RECIBIDO:")
     print(texto)
     print("=========================\n")
 
-    # PRUEBA
 
-    await update.message.reply_text(
-
-        "HE RECIBIDO TU MENSAJE"
-
-    )    #----------------------------------
+    #----------------------------------
     # ABRIR ROBLOX
     #----------------------------------
 
@@ -385,28 +398,40 @@ async def mensaje(
     # GEMINI
     #----------------------------------
 
-   print("LLAMANDO A GEMINI")
+    try:
 
-respuesta = preguntar_a_gemini(texto)
+        print("LLAMANDO A GEMINI")
 
-print("GEMINI HA RESPONDIDO")
+        respuesta = preguntar_a_gemini(texto)
 
-print(respuesta)
+        print("GEMINI HA RESPONDIDO")
 
-await update.message.reply_text(
-    respuesta
-)
+        print(respuesta)
 
 
-    #----------------------------------
-    # ENVIAR RESPUESTA
-    #----------------------------------
+        #----------------------------------
+        # ENVIAR RESPUESTA
+        #----------------------------------
 
-    await update.message.reply_text(
+        await update.message.reply_text(
 
-        respuesta
+            respuesta
 
-    )
+        )
+
+
+    except Exception as e:
+
+        print("\n=========================")
+        print("ERROR EN MENSAJE")
+        print(e)
+        print("=========================\n")
+
+        await update.message.reply_text(
+
+            "Jarvis ha encontrado un error inesperado."
+
+        )
 
 
 #==================================
