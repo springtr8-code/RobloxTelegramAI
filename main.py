@@ -321,7 +321,6 @@ def abrir_roblox():
         r"C:\Users\leoor\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Roblox\Roblox Studio.lnk"
     )
 
-
 #==================================
 # /START
 #==================================
@@ -332,25 +331,26 @@ async def start(
 ):
 
     await update.message.reply_text(
+
 """
 ===================================
 
-        JARVIS HA SIDO INICIADO
+        JARVIS ONLINE
 
 ===================================
 
-Sistemas Online:
+Inicializando sistemas...
 
-- Inteligencia Artificial
-- Gemini 2.5 Flash
-- Roblox Studio
-- Lua
-- Python
-- GitHub
-- Railway
-- Desarrollo de videojuegos
-- Diseño de sistemas
-- Automatización
+[OK] Gemini 2.5 Flash
+[OK] Telegram Bot
+[OK] Roblox Studio
+[OK] Lua
+[OK] Python
+[OK] GitHub
+[OK] Railway
+[OK] Inteligencia Artificial
+[OK] Desarrollo de videojuegos
+[OK] Project Manager
 
 -----------------------------------
 
@@ -360,22 +360,34 @@ de desarrollo.
 Puedo ayudarte con:
 
 - Roblox Studio
-- Crear videojuegos completos
-- Lua y Python
+- Lua
+- Python
 - Inteligencia Artificial
-- GitHub y Railway
-- Optimización y Debugging
-- Diseño de sistemas complejos
-- Organización de proyectos
+- GitHub
+- Railway
+- APIs
+- Bases de datos
+- Automatizacion
+- Videojuegos completos
+- Sistemas complejos
+- Debugging y optimizacion
+- Planificacion de proyectos
 
-Escribe cualquier mensaje para empezar.
+-----------------------------------
 
-¡Estoy listo para trabajar!
+Estado del sistema:
+
+ONLINE
+
+Esperando instrucciones...
+
+Escribe cualquier mensaje para comenzar.
 
 ===================================
-"""
-)
 
+"""
+
+    )
 
 #==================================
 # MENSAJES
