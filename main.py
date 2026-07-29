@@ -53,7 +53,7 @@ Usuario:
 	print("MODELO UTILIZADO:")
 	print("gemini-2.5-flash")
         respuesta = client.models.generate_content(
-            model="gemini-2.5-flash-lite",
+            model="gemini-2.5-flash",
             contents=prompt
         )
 
