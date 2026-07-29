@@ -23,6 +23,9 @@ API_KEY = os.getenv("API_KEY")
 
 SYSTEM_PROMPT = os.getenv("SYSTEM_PROMPT")
 
+print("TOKEN =", TOKEN)
+print("API_KEY =", API_KEY)
+print("SYSTEM_PROMPT =", SYSTEM_PROMPT)
 
 #==================================
 # GEMINI
