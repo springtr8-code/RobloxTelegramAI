@@ -26,7 +26,6 @@ SYSTEM_PROMPT = os.getenv("SYSTEM_PROMPT")
 print("TOKEN =", TOKEN)
 print("API_KEY =", API_KEY)
 print("SYSTEM_PROMPT =", SYSTEM_PROMPT)
-
 #==================================
 # GEMINI
 #==================================
@@ -51,7 +50,8 @@ Usuario:
 """
 
         print("ENVIANDO A GEMINI")
-
+	print("MODELO UTILIZADO:")
+	print("gemini-2.5-flash")
         respuesta = client.models.generate_content(
             model="gemini-2.5-flash-lite",
             contents=prompt
