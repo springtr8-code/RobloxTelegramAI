@@ -165,7 +165,7 @@ async def mensaje(
 
 
     texto = update.message.text
-
+    print("1")
 
     print("\n=========================")
     print("MENSAJE RECIBIDO:")
@@ -197,9 +197,9 @@ async def mensaje(
     try:
 
         print("LLAMANDO A GEMINI")
-
+        print("2")
         respuesta = preguntar_a_gemini(texto)
-
+        print("3")
         print("GEMINI HA RESPONDIDO")
 
         print(respuesta)
@@ -208,7 +208,7 @@ async def mensaje(
         #----------------------------------
         # ENVIAR RESPUESTA
         #----------------------------------
-
+        print("4")
         await update.message.reply_text(
 
             respuesta
